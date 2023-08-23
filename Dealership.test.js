@@ -5,15 +5,24 @@ let dealership;
 let mercedes;
 
 beforeEach(() => {
-    mercedes = new Car("C63", "Mercedes", 180_000, "petrol");
+    ferrari = new Car("F40", "Ferrari", 1_000_000, "petrol");
+    ford = new Car("GT40", "Ford", 100_000, "petrol");
+    mercedes = new Car("C63", "Mercedes", 180_000, "diesel");
+
     dealership = new Dealership("Carlo's", 10);
+
+    dealership.addCar(ferrari);
+    dealership.addCar(ford);
+    dealership.addCar(mercedes);
 });
 
 
 test('can add car to stock', () => {
 
-    dealership.addCar(mercedes);
-    expected = 1; 
+    jaguar = new Car("F Type", "Jaguar", 250_000, "diesel");
+
+    dealership.addCar(jaguar);
+    expected = 4; 
     actual = dealership.getStockCount();
     expect(actual).toBe(expected);
 
@@ -28,6 +37,14 @@ test('can\'t add car to stock', () => {
 
 });
 
+
+test('can get car manufacturers', () => {
+
+    expected = ["Ferrari", "Ford", "Mercedes"];
+    actual = dealership.getCarManufacturers();
+    expect(actual).toBe(expected);
+
+})
 describe('getters', () => {
 
     test('can get name', () => {

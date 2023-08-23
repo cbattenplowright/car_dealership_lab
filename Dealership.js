@@ -6,8 +6,8 @@ const Dealership = function(name, capacity){
 
 Dealership.prototype.addCar = function(car) { 
 
-    if (this.carStock.length === this.capacity) {
-        return "Unavailable space in dealership to add car to stock"
+    if (this.getStockCount() === this.capacity) {
+        return "Unavailable space in dealership to add car to stock";
     } else {
         this.carStock.push(car);
     }

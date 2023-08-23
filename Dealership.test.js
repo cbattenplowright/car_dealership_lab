@@ -29,8 +29,8 @@ test('can add car to stock', () => {
 });
 
 test('can\'t add car to stock', () => {
-    
-    dealership.setCapacity(0);
+
+    dealership.setCapacity(3);
     expected = "Unavailable space in dealership to add car to stock";
     actual = dealership.addCar(mercedes);
     expect(actual).toBe(expected);

@@ -7,9 +7,6 @@
     "test": "jest",
     "test:coverage": "jest --coverage"
   },
-  "jest": {
-    "coverageReporters": ["html"]
-  },
   "author": "",
   "license": "ISC",
   "devDependencies": {

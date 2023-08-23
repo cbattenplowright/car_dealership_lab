@@ -5,13 +5,13 @@ let dealership;
 let mercedes;
 
 beforeEach(() => {
-    ferrari = new Car("F40", "Ferrari", 1_000_000, "petrol");
+    ferrari_F40 = new Car("F40", "Ferrari", 1_000_000, "petrol");
     ford = new Car("GT40", "Ford", 100_000, "petrol");
     mercedes = new Car("C63", "Mercedes", 180_000, "diesel");
 
     dealership = new Dealership("Carlo's", 10);
 
-    dealership.addCar(ferrari);
+    dealership.addCar(ferrari_F40);
     dealership.addCar(ford);
     dealership.addCar(mercedes);
 });
@@ -41,6 +41,16 @@ test('can get car manufacturers', () => {
 
     expected = ["Ferrari", "Ford", "Mercedes"];
     actual = dealership.getCarManufacturers();
+    expect(actual).toMatchObject(expected);
+
+});
+
+test('can find all cars from a given manufacturer', () => {
+
+    ferrari_F50 = new Car("F50", "Ferrari", 100_000, "diesel");
+    dealership.addCar(ferrari_F50);
+    expected = [ferrari_F40, ferrari_F50];
+    actual = dealership.filterByManufacturer("Ferrari");
     expect(actual).toMatchObject(expected);
 
 });

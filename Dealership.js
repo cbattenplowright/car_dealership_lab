@@ -14,6 +14,14 @@ Dealership.prototype.addCar = function(car) {
 
 };
 
+Dealership.prototype.filterByManufacturer = function(manufacturer) {
+    const carsFilteredByManufacturer = this.carStock.filter((car) => {
+        return car.getManufacturer() === manufacturer;
+    });
+
+    return carsFilteredByManufacturer;
+};
+
 Dealership.prototype.getCarManufacturers = function() {
     
     const carManufacturers =  this.carStock.map((car) => { return car.manufacturer });

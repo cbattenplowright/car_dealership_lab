@@ -10,8 +10,8 @@ Dealership.prototype.getName() = function() { return this.name };
 Dealership.prototype.getCapacity() = function() { return this.capacity };
 Dealership.prototype.getCarStock() = function() { return this.carStock };
 
-Dealership.prototype.setName() = function(name) { this.name };
-Dealership.prototype.setCapacity() = function(capacity) { this.capacity };
-Dealership.prototype.setCarStock() = function(carStock) { this.carStock };
+Dealership.prototype.setName() = function(name) { this.name = name };
+Dealership.prototype.setCapacity() = function(capacity) { this.capacity = capacity };
+Dealership.prototype.setCarStock() = function(carStock) { this.carStock = carStock };
 
 module.exports = Dealership;

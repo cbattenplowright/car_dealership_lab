@@ -74,7 +74,7 @@ describe('setters', () => {
     test('can set price', () => {
 
         ferrari.setEngineType("diesel");
-
+ 
         expected = "diesel";
         actual = ferrari.getEngineType();
         expect(actual).toBe(expected);

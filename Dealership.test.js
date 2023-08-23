@@ -26,9 +26,8 @@ describe('getters', () => {
 
     test('can get car stock', () => {
 
-        expected = [];
         actual = dealership.getCarStock();
-        expect(actual).toBe(expected);
+        expect(actual).toHaveLength(0);
 
     });
 

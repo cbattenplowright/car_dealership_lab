@@ -6,11 +6,12 @@ const Customer = function (name, wallet) {
 
 Customer.prototype.buyCar = function(car) { 
 
-    if (wallet >= car.getPrice) {
-        Customer.setCar(car);
-        wallet -= car.getPrice;
+    if (this.wallet >= car.getPrice()) {
+        this.setCar(car); // to call the protoype method use *** this. ***
+        this.wallet -= car.getPrice();
         return `You have just purchased the ${this.car.getManufacturer} ${this.car.getModel} and have ${this.wallet} remaining in you wallet`;
     } else {
+        console.log("You don't have enough money in your wallet to purchase the car");
         return "You don't have enough money in your wallet to purchase the car";
     }
 

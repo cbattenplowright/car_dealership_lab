@@ -10,6 +10,19 @@ beforeEach(() => {
 });
 
 
+test('can buy car', () => {
+
+    buyCar = customer.buyCar(car);
+    // tests that car gets set to this.car property of customer
+    expect(customer.getCar()).toBe(car);
+    // tests that car price is subtracted from wallet
+    expect(customer.getWallet()).toBe(50_000);
+    // tests the return output of the function if car is purchased
+    expect(buyCar).toBe(`You have just purchased the ${car.getManufacturer} ${car.getModel} and have ${customer.wallet} remaining in you wallet`);
+
+});
+
+
 describe('getters', () => {
 
     test('can get name', () => {

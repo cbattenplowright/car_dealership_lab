@@ -40,3 +40,44 @@ describe('getters', () => {
     });
 });
 
+describe('setters', () => {
+
+    test('can set model', () => {
+
+        ferrari.setModel('458');
+
+        expected = '458';
+        actual = ferrari.getModel();
+        expect(actual).toBe(expected);
+
+    });
+
+    test('can set manufacturer', () => {
+
+        ferrari.setManufacturer('Mercedes');
+
+        expected = 'Mercedes';
+        actual = ferrari.getManufacturer();
+        expect(actual).toBe(expected);
+    });
+
+
+    test('can set price', () => {
+
+        ferrari.setPrice(50_000);
+
+        expected = 50_000;
+        actual = ferrari.getPrice();
+        expect(actual).toBe(expected);
+    });
+
+    test('can set price', () => {
+
+        ferrari.setEngineType("diesel");
+
+        expected = "diesel";
+        actual = ferrari.getEngineType();
+        expect(actual).toBe(expected);
+    });
+
+});

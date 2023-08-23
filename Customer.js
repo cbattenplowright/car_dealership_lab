@@ -25,6 +25,6 @@ Customer.prototype.getCar = function () { return this.car; };
 
 Customer.prototype.setName = function (name) { this.name = name; };
 Customer.prototype.setWallet = function (wallet) { this.wallet = wallet; };
-Customer.prototyp.setCar = function(car) { this.car = car };
+Customer.prototype.setCar = function(car) { this.car = car };
 
 module.exports = Customer;

@@ -1,9 +1,12 @@
 const Customer = require('./Customer');
+const Car = require('./Car');
 
 let customer;
+let car;
 
 beforeEach(() => {
     customer = new Customer("Jimbob", 200_000);
+    car = new Car("911", "Porsche", 150_000, "diesel");
 });
 
 
@@ -24,6 +27,14 @@ describe('getters', () => {
         expect(actual).toBe(expected);
 
     });
+
+    test('can get car', () => {
+
+        expected = null;
+        actual = customer.getCar();
+        expect(actual).toBe(expected);
+
+    })
 });
 
 describe('setters', () => {
@@ -45,4 +56,13 @@ describe('setters', () => {
         expect(actual).toBe(expected);
 
     });
+
+    test('can set car', () => {
+
+        customer.setCar(car);
+        expected = new Car("911", "Porsche", 150_000, "diesel");
+        actual = customer.getCar();
+        expect(actual).toEqual(expected);
+
+    })
 });

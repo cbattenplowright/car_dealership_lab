@@ -14,7 +14,7 @@ Dealership.prototype.addCar = function(car) {
 
 };
 
-Dealership.prototype.getCarMaunfacturers = function() {
+Dealership.prototype.getCarManufacturers = function() {
     
     const carManufacturers =  this.carStock.map((car) => { return car.manufacturer });
     return carManufacturers;

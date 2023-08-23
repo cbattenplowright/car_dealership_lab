@@ -37,14 +37,14 @@ test('can\'t add car to stock', () => {
 
 });
 
-
 test('can get car manufacturers', () => {
 
     expected = ["Ferrari", "Ford", "Mercedes"];
     actual = dealership.getCarManufacturers();
-    expect(actual).toBe(expected);
+    expect(actual).toMatchObject(expected);
 
-})
+});
+
 describe('getters', () => {
 
     test('can get name', () => {
@@ -65,7 +65,7 @@ describe('getters', () => {
 
     test('can get stock count', () => {
         
-        expected = 0;
+        expected = 3;
         actual = dealership.getStockCount();
         expect(actual).toBe(expected);
 

@@ -25,10 +25,19 @@ describe('getters', () => {
     });
 
     test('can get car stock', () => {
-
+        
+        expected = [];
         actual = dealership.getCarStock();
-        expect(actual).toHaveLength(0);
+        expect(actual).toEqual(expected);
 
     });
+
+});
+
+describe('setters', () => {
+
+    test('can set name', () => {
+
+    })
 
 });

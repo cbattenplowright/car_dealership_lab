@@ -10,6 +10,24 @@ beforeEach(() => {
 });
 
 
+test('can add car to stock', () => {
+
+    dealership.addCar(mercedes);
+    expected = 1; 
+    actual = dealership.getStockCount();
+    expect(actual).toBe(expected);
+
+});
+
+test('can\'t add car to stock', () => {
+    
+    dealership.setCapacity(0);
+    expected = "Unavailable space in dealership to add car to stock";
+    actual = dealership.addCar(mercedes);
+    expect(actual).toBe(expected);
+
+});
+
 describe('getters', () => {
 
     test('can get name', () => {

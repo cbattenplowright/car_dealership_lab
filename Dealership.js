@@ -4,6 +4,16 @@ const Dealership = function(name, capacity){
     this.carStock = [];
 };
 
+Dealership.prototype.addCar = function(car) { 
+
+    if (this.carStock.length === this.capacity) {
+        return "Unavailable space in dealership to add car to stock"
+    } else {
+        this.carStock.push(car);
+    }
+
+};
+
 // GETTERS AND SETTERS
 
 Dealership.prototype.getName = function() { return this.name };
